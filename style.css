@@ -634,6 +634,7 @@ td {
 .widget-projects-list td {
 	background-color: var(--mi-gris);
 	text-align: center;
+	position: relative;
 }
 
 .widget-projects-list .legend {
@@ -663,95 +664,39 @@ td {
 	background: var(--mi-naranja);
 }
 
-/* Touch Tooltips */
+/* Touch Tooltips for Projects List Widget */
 @media (hover: none) and (pointer: coarse), (pointer: coarse) {
-	[data-has-touch-tooltip][data-touch-tooltip-display="underline"],
-	[data-has-touch-tooltip]:not([data-touch-tooltip-display="border"]):not(img):not(td):not(button):not(input) {
-		text-decoration: underline dotted !important;
-		text-decoration-thickness: 1.5px !important;
-		text-underline-offset: 3px !important;
+	.widget-projects-list td[data-has-touch-tooltip] {
 		cursor: pointer;
 	}
 
-	a[data-has-touch-tooltip],
-	a:has([data-has-touch-tooltip]) {
-		color: var(--mi-naranja) !important;
-		text-decoration: underline dotted !important;
-		text-decoration-thickness: 1.5px !important;
-		text-underline-offset: 3px !important;
-		box-shadow: none !important;
-		border-bottom: none !important;
-		cursor: pointer;
-	}
-
-	[data-touch-tooltip-display="border"],
-	td[data-has-touch-tooltip],
-	button[data-has-touch-tooltip],
-	input[type="button"][data-has-touch-tooltip],
-	input[type="submit"][data-has-touch-tooltip],
-	input[type="reset"][data-has-touch-tooltip] {
-		border: 1.5px dotted #999999 !important;
-		text-decoration: none !important;
-		cursor: pointer;
-	}
-
-	img[data-has-touch-tooltip] {
-		outline: 2px dotted var(--mi-naranja);
-		outline-offset: 2px;
-		text-decoration: none !important;
-		cursor: pointer;
-	}
-
-	button[data-has-touch-tooltip],
-	input[type="button"][data-has-touch-tooltip],
-	input[type="submit"][data-has-touch-tooltip] {
-		border: 1.5px dotted var(--mi-naranja) !important;
-		text-decoration: none !important;
+	.widget-projects-list td[data-has-touch-tooltip]::after {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+		border: 1px dotted #888888;
+		pointer-events: none;
+		box-sizing: border-box;
 	}
 }
 
-.touch-tooltips-active [data-has-touch-tooltip][data-touch-tooltip-display="underline"],
-.touch-tooltips-active [data-has-touch-tooltip]:not([data-touch-tooltip-display="border"]):not(img):not(td):not(button):not(input) {
-	text-decoration: underline dotted !important;
-	text-decoration-thickness: 1.5px !important;
-	text-underline-offset: 3px !important;
+.touch-tooltips-active .widget-projects-list td[data-has-touch-tooltip] {
 	cursor: pointer;
 }
 
-.touch-tooltips-active a[data-has-touch-tooltip],
-.touch-tooltips-active a:has([data-has-touch-tooltip]) {
-	color: var(--mi-naranja) !important;
-	text-decoration: underline dotted !important;
-	text-decoration-thickness: 1.5px !important;
-	text-underline-offset: 3px !important;
-	box-shadow: none !important;
-	border-bottom: none !important;
-	cursor: pointer;
-}
-
-.touch-tooltips-active [data-touch-tooltip-display="border"],
-.touch-tooltips-active td[data-has-touch-tooltip],
-.touch-tooltips-active button[data-has-touch-tooltip],
-.touch-tooltips-active input[type="button"][data-has-touch-tooltip],
-.touch-tooltips-active input[type="submit"][data-has-touch-tooltip],
-.touch-tooltips-active input[type="reset"][data-has-touch-tooltip] {
-	border: 1.5px dotted #999999 !important;
-	text-decoration: none !important;
-	cursor: pointer;
-}
-
-.touch-tooltips-active img[data-has-touch-tooltip] {
-	outline: 2px dotted var(--mi-naranja);
-	outline-offset: 2px;
-	text-decoration: none !important;
-	cursor: pointer;
-}
-
-.touch-tooltips-active button[data-has-touch-tooltip],
-.touch-tooltips-active input[type="button"][data-has-touch-tooltip],
-.touch-tooltips-active input[type="submit"][data-has-touch-tooltip] {
-	border: 1.5px dotted var(--mi-naranja) !important;
-	text-decoration: none !important;
+.touch-tooltips-active .widget-projects-list td[data-has-touch-tooltip]::after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	border: 1px dotted #888888;
+	pointer-events: none;
+	box-sizing: border-box;
 }
 
 /* Tooltip popup bubble */
@@ -801,26 +746,6 @@ td {
 	text-decoration: underline !important;
 	font-size: 13.5px;
 	word-break: break-word;
-}
-
-.touch-tooltip-btn-action {
-	display: inline-block;
-	background-color: var(--mi-naranja);
-	color: #ffffff !important;
-	border: none;
-	border-radius: 4px;
-	padding: 6px 14px;
-	font-family: 'Roboto', sans-serif;
-	font-size: 13px;
-	font-weight: 500;
-	cursor: pointer;
-	text-decoration: none !important;
-	transition: background-color 0.2s;
-}
-
-.touch-tooltip-btn-action:hover,
-.touch-tooltip-btn-action:active {
-	background-color: #e67800;
 }
 
 .touch-tooltip-arrow {

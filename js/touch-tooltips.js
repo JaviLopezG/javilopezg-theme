@@ -1,11 +1,10 @@
 /**
  * Touch Tooltips
- * Handles interactive tooltips on touch devices for allowed elements:
- * img, li, a, td, and buttons.
+ * Handles interactive tooltips on touch devices specifically for the
+ * projects list widget (.widget-projects-list td).
  *
- * Provides dotted outlines/underlines and opens an interactive popup on tap.
- * If the element is or contains a link, provides an "Ir a <link text>" action.
- * If the element is or contains a button, provides a "Clickar botón" action.
+ * Shows an internal dotted border indicator on touch devices and opens
+ * a popup on tap. If the cell contains a link, provides an "Ir a <link text>" action.
  */
 (function() {
 	'use strict';
@@ -14,10 +13,8 @@
 	var activeTarget = null;
 	var popupOpenedAt = 0;
 	var popupScrollY = 0;
-	var isExecutingProgrammaticClick = false;
 
-	// Allowed element tag names / selectors based on requirements
-	var ALLOWED_SELECTOR = 'img, li, a, td, button, input[type="button"], input[type="submit"], input[type="reset"], [role="button"]';
+	var TARGET_SELECTOR = '.widget-projects-list td[title], .widget-projects-list td[aria-label], .widget-projects-list td[data-tooltip]';
 
 	/**
 	 * Check if the current device/environment uses touch interaction
@@ -44,8 +41,6 @@
 			text = element.getAttribute('data-touch-tooltip-text');
 		} else if (element.hasAttribute('title') && element.getAttribute('title').trim()) {
 			text = element.getAttribute('title').trim();
-		} else if (element.tagName.toLowerCase() === 'img' && element.hasAttribute('alt') && element.getAttribute('alt').trim()) {
-			text = element.getAttribute('alt').trim();
 		} else if (element.hasAttribute('aria-label') && element.getAttribute('aria-label').trim()) {
 			text = element.getAttribute('aria-label').trim();
 		} else if (element.hasAttribute('data-tooltip') && element.getAttribute('data-tooltip').trim()) {
@@ -56,28 +51,7 @@
 	}
 
 	/**
-	 * Determine if element should have border style instead of underline
-	 * @param {HTMLElement} element
-	 * @return {boolean}
-	 */
-	function shouldShowBorder(element) {
-		var tag = element.tagName.toLowerCase();
-		if (tag === 'img' || tag === 'td' || tag === 'button' || tag === 'input') {
-			return true;
-		}
-		if (element.getAttribute('role') === 'button') {
-			return true;
-		}
-		// Also if text content is very short or only contains an image/media
-		var text = element.textContent.trim();
-		if (text.length === 0 || (element.querySelector('img') && text.length < 3)) {
-			return true;
-		}
-		return false;
-	}
-
-	/**
-	 * Scan DOM and register allowed elements with tooltips
+	 * Scan DOM and register widget table cells with tooltips
 	 */
 	function initTooltipTargets() {
 		if (!isTouchDevice()) {
@@ -86,15 +60,10 @@
 
 		document.documentElement.classList.add('touch-tooltips-active');
 
-		var candidates = document.querySelectorAll(ALLOWED_SELECTOR);
+		var candidates = document.querySelectorAll(TARGET_SELECTOR);
 
 		for (var i = 0; i < candidates.length; i++) {
 			var el = candidates[i];
-
-			// Skip screen reader utility text
-			if (el.classList.contains('screen-reader-text') || el.classList.contains('skip-link')) {
-				continue;
-			}
 
 			var tooltipText = getTooltipText(el);
 			if (!tooltipText) {
@@ -104,13 +73,7 @@
 			el.setAttribute('data-touch-tooltip-text', tooltipText);
 			el.setAttribute('data-has-touch-tooltip', 'true');
 
-			if (shouldShowBorder(el)) {
-				el.setAttribute('data-touch-tooltip-display', 'border');
-			} else {
-				el.setAttribute('data-touch-tooltip-display', 'underline');
-			}
-
-			// Remove native title to prevent default conflicting browser popups
+			// Remove native title to prevent default conflicting browser popups on touch
 			if (el.hasAttribute('title')) {
 				el.setAttribute('data-original-title', el.getAttribute('title'));
 				el.removeAttribute('title');
@@ -134,7 +97,7 @@
 	}
 
 	/**
-	 * Find associated link in or around target
+	 * Find associated link in or around target cell
 	 * @param {HTMLElement} target
 	 * @param {EventTarget} eventTarget
 	 * @return {HTMLAnchorElement|null}
@@ -153,33 +116,12 @@
 	}
 
 	/**
-	 * Find associated button in or around target
-	 * @param {HTMLElement} target
-	 * @param {EventTarget} eventTarget
-	 * @return {HTMLElement|null}
-	 */
-	function resolveAssociatedButton(target, eventTarget) {
-		var btnSelector = 'button, input[type="button"], input[type="submit"], input[type="reset"], [role="button"]';
-		if (eventTarget && eventTarget.closest) {
-			var clickedBtn = eventTarget.closest(btnSelector);
-			if (clickedBtn && !clickedBtn.classList.contains('touch-tooltip-btn-action')) {
-				return clickedBtn;
-			}
-		}
-		if (target.matches(btnSelector)) {
-			return target;
-		}
-		return target.querySelector(btnSelector);
-	}
-
-	/**
-	 * Display tooltip popup above or below target
+	 * Display tooltip popup above or below target cell
 	 * @param {HTMLElement} target
 	 * @param {string} text
 	 * @param {HTMLAnchorElement|null} link
-	 * @param {HTMLElement|null} button
 	 */
-	function showPopup(target, text, link, button) {
+	function showPopup(target, text, link) {
 		closePopup();
 
 		var popup = document.createElement('div');
@@ -209,29 +151,6 @@
 
 			actionContainer.appendChild(actionLink);
 			popup.appendChild(actionContainer);
-		} else if (button) {
-			var buttonActionContainer = document.createElement('div');
-			buttonActionContainer.className = 'touch-tooltip-action';
-
-			var actionBtn = document.createElement('button');
-			actionBtn.type = 'button';
-			actionBtn.className = 'touch-tooltip-btn-action';
-			actionBtn.textContent = 'Clickar botón';
-
-			actionBtn.addEventListener('click', function(e) {
-				e.preventDefault();
-				e.stopPropagation();
-				closePopup();
-				isExecutingProgrammaticClick = true;
-				try {
-					button.click();
-				} finally {
-					isExecutingProgrammaticClick = false;
-				}
-			});
-
-			buttonActionContainer.appendChild(actionBtn);
-			popup.appendChild(buttonActionContainer);
 		}
 
 		var arrow = document.createElement('div');
@@ -298,21 +217,17 @@
 	 * @param {Event} event
 	 */
 	function handleClick(event) {
-		if (isExecutingProgrammaticClick) {
-			return;
-		}
-
 		if (!isTouchDevice()) {
 			return;
 		}
 
-		// Allow interaction with active popup contents (e.g. action links/buttons)
+		// Allow interaction with active popup contents (e.g. action links)
 		if (activePopup && activePopup.contains(event.target)) {
 			return;
 		}
 
-		// Find closest tooltip target
-		var target = event.target.closest('[data-has-touch-tooltip]');
+		// Find closest tooltip target in widget
+		var target = event.target.closest('.widget-projects-list td[data-has-touch-tooltip]');
 
 		// If no tooltip target was clicked, close active popup
 		if (!target) {
@@ -343,12 +258,7 @@
 		event.stopPropagation();
 
 		var link = resolveAssociatedLink(target, event.target);
-		var button = null;
-		if (!link) {
-			button = resolveAssociatedButton(target, event.target);
-		}
-
-		showPopup(target, tooltipText, link, button);
+		showPopup(target, tooltipText, link);
 	}
 
 	/**
@@ -368,8 +278,6 @@
 			if (!activePopup) {
 				return;
 			}
-			// Only close if user scrolled intentionally (more than 20px)
-			// and not immediately during popup insertion tap
 			if (Date.now() - popupOpenedAt < 200) {
 				return;
 			}
