@@ -5,7 +5,7 @@
  Author:       Juan Hernándo, Javi López
  Author URI:   https://javilopezg.com
  Template:     twentysixteen
- Version:      1.0.3
+ Version:      1.0.4
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  javilopezg-theme
@@ -13,10 +13,10 @@
 
 .site-branding {
 	margin: 1.75em auto;
-	
+
 }
 
-.sd-social-official .sd-content ul > li {
+.sd-social-official .sd-content ul>li {
 	float: none !important;
 }
 
@@ -31,32 +31,33 @@ div.sharedaddy h3.sd-title {
 }
 
 .site-header-main {
-	position:relative;
-	z-index:10;
+	position: relative;
+	z-index: 10;
 }
 
-.site-header-main h1, .site-header-main p{
+.site-header-main h1,
+.site-header-main p {
 	text-align: center;
 	color: darkgrey;
 }
 
-.site-branding h1.site-title a{
+.site-branding h1.site-title a {
 	color: darkgrey;
 }
 
 .header-image {
 	position: absolute;
 	top: 0;
-	left:0;
-	background-color:white;
+	left: 0;
+	background-color: white;
 }
 
 .site-header {
-	margin-bottom:3em;
+	margin-bottom: 3em;
 }
 
 @media screen and (min-width: 56.875em) {
-	.header-image{
+	.header-image {
 		margin: 0 4.5455%;
 	}
 }
@@ -82,21 +83,22 @@ h5,
 h6,
 .entry-title,
 .widget .widget-title,
-button, button[disabled]:hover, 
-button[disabled]:focus, 
-input[type="button"], 
-input[type="button"][disabled]:hover, 
-input[type="button"][disabled]:focus, 
-input[type="reset"], 
-input[type="reset"][disabled]:hover, 
-input[type="reset"][disabled]:focus, 
-input[type="submit"], 
-input[type="submit"][disabled]:hover, 
+button,
+button[disabled]:hover,
+button[disabled]:focus,
+input[type="button"],
+input[type="button"][disabled]:hover,
+input[type="button"][disabled]:focus,
+input[type="reset"],
+input[type="reset"][disabled]:hover,
+input[type="reset"][disabled]:focus,
+input[type="submit"],
+input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:focus {
 	font-family: "Roboto Slab", serif;
 }
 
-body:not(.custom-background-image)::before, 
+body:not(.custom-background-image)::before,
 body:not(.custom-background-image)::after {
 	height: 0;
 }
@@ -119,7 +121,7 @@ a {
 }
 
 .rubber-header {
-  align-self: flex-start;
+	align-self: flex-start;
 }
 
 .header-duck .site-header-main {
@@ -149,30 +151,30 @@ a {
 	color: #fff;
 }
 
-.header-duck .site-header-main h1, 
+.header-duck .site-header-main h1,
 .header-duck .site-header-main p {
-  color: #000;
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-  line-height: 1.4em;
-  text-align: left;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	line-height: 1.4em;
+	text-align: left;
 }
 
 .header-duck .site-header-main h1,
 .header-duck .site-header-main .site-title {
 	font-family: 'Roboto Slab', serif;
-  font-size: 48px;
-  margin: 0 0 20px;
+	font-size: 48px;
+	margin: 0 0 20px;
 }
 
 .header-duck .site-branding {
-    margin: 0;
-    max-width: 660px;
+	margin: 0;
+	max-width: 660px;
 }
 
 .header-duck .menu-principal-container {
-  font-family: 'Roboto Slab', serif;
-  font-size: 20px;
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
 }
 
 .page-template-page-portada .servicios {
@@ -207,9 +209,9 @@ a {
 }
 
 .page-template-page-portada .servicio a {
-  align-self: center;
+	align-self: center;
 	color: #000;
-  text-align: center;
+	text-align: center;
 }
 
 .page-template-page-portada .servicio a:hover {
@@ -258,20 +260,20 @@ a {
 }
 
 .page-template-page-portada .news-info {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 30px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 30px;
 }
 
 .page-template-page-portada .news-info-img {
-    margin-right: 20px;
-    min-width: 48px;
+	margin-right: 20px;
+	min-width: 48px;
 }
 
 .page-template-page-portada .news-info-text {
-    line-height: 1.4em;
+	line-height: 1.4em;
 }
 
 .page-template-page-portada .news-info-text h2 {
@@ -335,6 +337,7 @@ a {
 }
 
 @media only screen and (max-width:910px) {
+
 	.site-header,
 	.site-main {
 		margin-top: 10px;
@@ -346,8 +349,8 @@ a {
 
 	.header-duck .site-header-main {
 		margin: 0 auto;
-    padding-left: 0;
-    width: 92vw;
+		padding-left: 0;
+		width: 92vw;
 	}
 
 	.rubber-header {
@@ -356,113 +359,113 @@ a {
 	}
 
 	.header-duck .site-header-main h1 {
-    font-size: 36px;
-    line-height: 1.2em;
-    margin: 8px 0;
-    text-align: center;
-  }
-
-  .header-duck .site-header-main p {
-  	display: block;
-    font-size: 18px;
-    line-height: 1.2em;
-    margin: 16px 0;
-    text-align: center;
-  }
-
-  .menu-toggle {
-  	background-color: #fafafa;
-  	margin-bottom: 0;
-  	width: 100%;
-  }
-
-  .main-navigation li {
-    border-top: 0;
-  }
-
-  .main-navigation a {
-  	font-size: 16px;
-  	padding: 5px 0;
-  	text-align: center;
-  }
-
-  /* Sidebar inside header menu on mobile viewports */
-  .site-header-menu .sidebar {
-  	border-top: 1px dashed #ccc;
-  	float: none;
-  	margin-top: 20px;
-  	padding: 20px 0 0;
-  	width: 100%;
-  }
-
-  .site-header-menu .sidebar .widget {
-  	margin-bottom: 25px;
-  	text-align: left;
-  }
-
-  .site-header-menu .sidebar .widget:last-child {
-  	margin-bottom: 10px;
-  }
-
-  .site-header-menu .sidebar .widget-title {
-  	font-family: 'Roboto Slab', serif;
-  	font-size: 18px;
-  	margin-bottom: 12px;
-  	text-align: left;
-  }
-
-  .site-header-menu .sidebar ul {
-  	list-style: none;
-  	margin: 0;
-  	padding: 0;
-  }
-
-  .site-header-menu .sidebar li {
-  	margin: 8px 0;
-  }
-
-  .site-header-menu .sidebar a {
-  	font-size: 16px;
-  	color: #ff8600;
-  }
-
-  .site-header-menu .sidebar a:hover {
-  	color: #000;
-  }
-
-  .site-header-menu .sidebar .search-form {
-  	margin: 0;
-  	max-width: 300px;
-  }
-
-  .site-header-menu .sidebar .widget-projects-list td {
-  	text-align: center;
-  }
-
-  .page-template-page-portada .servicios {
-  	margin: 30px 0;
-  }
-
-  .page-template-page-portada .servicio {
-  	width: 100%;
-  }
-
-  .site-content {
-		margin: 0 auto;
-  	width: 92vw;
-  }
-
-  .page-template-page-portada .news-info-img {
-    display: none;
+		font-size: 36px;
+		line-height: 1.2em;
+		margin: 8px 0;
+		text-align: center;
 	}
 
-  .page-template-page-portada .columnas-secciones {
-  	margin: 20px 0;
-  }
+	.header-duck .site-header-main p {
+		display: block;
+		font-size: 18px;
+		line-height: 1.2em;
+		margin: 16px 0;
+		text-align: center;
+	}
 
-  .page-template-page-portada .columnas-secciones .columna-blog {
-    padding: 0 0 50px 0;
-    width: 100%;
+	.menu-toggle {
+		background-color: #fafafa;
+		margin-bottom: 0;
+		width: 100%;
+	}
+
+	.main-navigation li {
+		border-top: 0;
+	}
+
+	.main-navigation a {
+		font-size: 16px;
+		padding: 5px 0;
+		text-align: center;
+	}
+
+	/* Sidebar inside header menu on mobile viewports */
+	.site-header-menu .sidebar {
+		border-top: 1px dashed #ccc;
+		float: none;
+		margin-top: 20px;
+		padding: 20px 0 0;
+		width: 100%;
+	}
+
+	.site-header-menu .sidebar .widget {
+		margin-bottom: 25px;
+		text-align: left;
+	}
+
+	.site-header-menu .sidebar .widget:last-child {
+		margin-bottom: 10px;
+	}
+
+	.site-header-menu .sidebar .widget-title {
+		font-family: 'Roboto Slab', serif;
+		font-size: 18px;
+		margin-bottom: 12px;
+		text-align: left;
+	}
+
+	.site-header-menu .sidebar ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.site-header-menu .sidebar li {
+		margin: 8px 0;
+	}
+
+	.site-header-menu .sidebar a {
+		font-size: 16px;
+		color: #ff8600;
+	}
+
+	.site-header-menu .sidebar a:hover {
+		color: #000;
+	}
+
+	.site-header-menu .sidebar .search-form {
+		margin: 0;
+		max-width: 300px;
+	}
+
+	.site-header-menu .sidebar .widget-projects-list td {
+		text-align: center;
+	}
+
+	.page-template-page-portada .servicios {
+		margin: 30px 0;
+	}
+
+	.page-template-page-portada .servicio {
+		width: 100%;
+	}
+
+	.site-content {
+		margin: 0 auto;
+		width: 92vw;
+	}
+
+	.page-template-page-portada .news-info-img {
+		display: none;
+	}
+
+	.page-template-page-portada .columnas-secciones {
+		margin: 20px 0;
+	}
+
+	.page-template-page-portada .columnas-secciones .columna-blog {
+		padding: 0 0 50px 0;
+		width: 100%;
 	}
 
 	.site-footer .wrapper {
@@ -471,11 +474,11 @@ a {
 }
 
 .page-template-page-contenido .entry-title {
-  background-color: #fbfbfb;
-  font-family: 'Roboto Slab';
-  margin-top: 40px;
-  padding: 20px 0;
-  text-align: center;
+	background-color: #fbfbfb;
+	font-family: 'Roboto Slab';
+	margin-top: 40px;
+	padding: 20px 0;
+	text-align: center;
 }
 
 .page-template-page-contenido article {
@@ -489,9 +492,9 @@ a {
 }
 
 .page-template-page-contenido .entry-content {
-  font-family: 'Roboto', sans-serif;
-  margin: 0 auto;
-  max-width: 80ch;
+	font-family: 'Roboto', sans-serif;
+	margin: 0 auto;
+	max-width: 80ch;
 }
 
 .page-template-page-contenido .entry-content h2 {
@@ -499,7 +502,7 @@ a {
 }
 
 .page-template-page-contenido.page-id-7118 .entry-content img {
-  width: 100%;
+	width: 100%;
 }
 
 .page-id-7120 .entry-content {
@@ -519,16 +522,16 @@ a {
 }
 
 .site-content {
-  border-top: 1px dashed #ccc;
-  margin-top: 50px;
+	border-top: 1px dashed #ccc;
+	margin-top: 50px;
 }
 
 .widget:first-of-type {
-  border-top: 0;
-  margin-top: 30px;
+	border-top: 0;
+	margin-top: 30px;
 }
 
-body:not(.search-results) article:not(.type-page) img.below-entry-meta, 
+body:not(.search-results) article:not(.type-page) img.below-entry-meta,
 body:not(.search-results) article:not(.type-page) figure.below-entry-meta {
 	margin-left: 0;
 	max-width: 100%;
@@ -556,14 +559,14 @@ body:not(.search-results) article:not(.type-page) figure.below-entry-meta {
 }
 
 .page-template-page-full .entry-header {
-  display: none;
+	display: none;
 }
 
 @media only screen and (max-width: 900px) {
 	.page-template-page-full .entry-content {
 		margin: 0 auto;
 	}
-	
+
 	.page-template-page-full .site-content,
 	.page-template-page-full article {
 		width: 100%;
@@ -593,14 +596,15 @@ body:not(.search-results) article:not(.type-page) figure.below-entry-meta {
 }
 
 figure.wp-block-gallery.has-nested-images,
-.site-main > article {
+.site-main>article {
 	max-width: 100%;
 }
+
 /* Javi+ @2026 */
 :root {
-  --mi-naranja: #FF8600; 
-  --mi-naranja-suave: #FFEEAA;
-  --mi-gris: #F1F1F1;
+	--mi-naranja: #FF8600;
+	--mi-naranja-suave: #FFEEAA;
+	--mi-gris: #F1F1F1;
 }
 
 #cn-accept-cookie {
@@ -609,33 +613,40 @@ figure.wp-block-gallery.has-nested-images,
 }
 
 /* Widget de proyectos de la barra lateral */
-.widget-projects-list table, td {
-  border: 1px solid white;
-  border-collapse: collapse;
+.widget-projects-list table,
+td {
+	border: 1px solid white;
+	border-collapse: collapse;
 }
+
 .widget-projects-list td {
-  background-color: var(--mi-gris);
-  text-align: center;
+	background-color: var(--mi-gris);
+	text-align: center;
 }
+
 .widget-projects-list .legend {
 	font-size: x-small;
 }
+
 .widget-projects-list .legend ul li {
 	list-style-type: none;
 }
+
 .widget-projects-list .symbol {
 	font-style: bold;
 }
+
 .widget-projects-list .disclaimer {
 	font-size: small;
 }
-	
+
 /* Fragment directive */
 ::target-text {
-  background-color: var(--mi-naranja-suave);
-  color: black;
+	background-color: var(--mi-naranja-suave);
+	color: black;
 }
+
 ::selection {
-  color: white;
-  background: var(--mi-naranja);
+	color: white;
+	background: var(--mi-naranja);
 }
