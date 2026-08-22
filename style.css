@@ -5,7 +5,7 @@
  Author:       Juan Hernándo, Javi López
  Author URI:   https://javilopezg.com
  Template:     twentysixteen
- Version:      1.0.12
+ Version:      1.0.13
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  javilopezg-theme
@@ -72,7 +72,7 @@ textarea,
 .entry-footer,
 .entry-content .contact-form label {
 	color: #111;
-	font-family: "Roboto", sans-serif;
+	font-family: "Atkinson Hyperlegible Next", sans-serif;
 }
 
 h1,
@@ -95,7 +95,16 @@ input[type="reset"][disabled]:focus,
 input[type="submit"],
 input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:focus {
-	font-family: "Roboto Slab", serif;
+	font-family: "Atkinson Hyperlegible Next", sans-serif;
+}
+
+code,
+kbd,
+pre,
+samp,
+tt,
+var {
+	font-family: "Atkinson Hyperlegible Mono", monospace;
 }
 
 body:not(.custom-background-image)::before,
@@ -154,7 +163,7 @@ a {
 .header-duck .site-header-main h1,
 .header-duck .site-header-main p {
 	color: #000;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-size: 24px;
 	line-height: 1.4em;
 	text-align: left;
@@ -162,7 +171,7 @@ a {
 
 .header-duck .site-header-main h1,
 .header-duck .site-header-main .site-title {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-size: 40px;
 	margin: 0 0 20px;
 }
@@ -173,7 +182,7 @@ a {
 }
 
 .header-duck .menu-principal-container {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-size: 20px;
 }
 
@@ -201,7 +210,7 @@ a {
 }
 
 .page-template-page-portada .servicio h2 {
-	font-family: 'Roboto Slab', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-size: 20px;
 	font-weight: bold;
 	line-height: 1.2em;
@@ -228,7 +237,7 @@ a {
 
 .site-footer {
 	color: #000;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-size: 16px;
 	padding: 0;
 }
@@ -263,7 +272,7 @@ a {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	margin-bottom: 30px;
 }
 
@@ -278,7 +287,7 @@ a {
 
 .page-template-page-portada .news-info-text h2 {
 	color: #000;
-	font-family: 'Roboto Slab', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-size: 30px;
 	line-height: 1.2em;
 	margin: 10px 0;
@@ -291,7 +300,7 @@ a {
 
 .page-template-page-portada .columnas-secciones h3 {
 	display: inline-block;
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 }
 
 .page-template-page-portada .columnas-secciones img {
@@ -332,7 +341,7 @@ a {
 
 .page-template-page-portada .columna-blog li a h3 {
 	color: #999;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-size: 16px;
 }
 
@@ -414,7 +423,7 @@ a {
 	}
 
 	.site-header-menu .sidebar .widget-title {
-		font-family: 'Roboto Slab', serif;
+		font-family: 'Atkinson Hyperlegible Next', sans-serif;
 		font-size: 18px;
 		margin-bottom: 12px;
 		text-align: left;
@@ -487,7 +496,7 @@ a {
 
 .page-template-page-contenido .entry-title {
 	background-color: #fbfbfb;
-	font-family: 'Roboto Slab';
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	margin-top: 40px;
 	padding: 20px 0;
 	text-align: center;
@@ -504,13 +513,13 @@ a {
 }
 
 .page-template-page-contenido .entry-content {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	margin: 0 auto;
 	max-width: 80ch;
 }
 
 .page-template-page-contenido .entry-content h2 {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 }
 
 .page-template-page-contenido.page-id-7118 .entry-content img {
@@ -691,10 +700,10 @@ td {
 .touch-tooltips-active .widget-projects-list td[data-has-touch-tooltip]::after {
 	content: '';
 	position: absolute;
-	top: 2px;
-	left: 2px;
-	right: 2px;
-	bottom: 2px;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
 	border: 1px dotted #888888;
 	pointer-events: none;
 	box-sizing: border-box;
@@ -709,7 +718,7 @@ td {
 	color: #ffffff;
 	padding: 10px 14px;
 	border-radius: 8px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-size: 14px;
 	line-height: 1.45;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);

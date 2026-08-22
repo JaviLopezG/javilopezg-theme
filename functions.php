@@ -82,8 +82,8 @@ remove_action( 'wp_head', 'feed_links_extra', 3 );
  */
 
 function vtx_load_fonts() {
-	wp_register_style('roboto-font', 'https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:400');
-	wp_enqueue_style( 'roboto-font');
+	wp_register_style('atkinson-font', 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
+	wp_enqueue_style( 'atkinson-font');
 }
 add_action('wp_print_styles', 'vtx_load_fonts');
 
