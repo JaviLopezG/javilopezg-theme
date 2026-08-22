@@ -781,3 +781,40 @@ td {
 .sidebar .search-form button.search-submit:before {
 	color: #fff;
 }
+
+/* Collapsible Archive and Category Widgets */
+.widget_archive .widget-item-hidden,
+.widget_categories .widget-item-hidden,
+.wp-block-archives .widget-item-hidden,
+.wp-block-categories .widget-item-hidden {
+	display: none !important;
+}
+
+.widget-more-item {
+	list-style: none !important;
+	margin: 8px 0 !important;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.widget-ellipsis {
+	letter-spacing: 2px;
+	font-weight: bold;
+	color: #888;
+}
+
+.widget-show-all-btn {
+	background: none !important;
+	border: none !important;
+	padding: 0 !important;
+	color: var(--mi-naranja) !important;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
+	font-size: 14px;
+	text-decoration: underline !important;
+	cursor: pointer;
+}
+
+.widget-show-all-btn:hover {
+	color: #000 !important;
+}
