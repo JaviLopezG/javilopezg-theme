@@ -397,7 +397,7 @@ a {
 
   .site-header-menu .sidebar .widget {
   	margin-bottom: 25px;
-  	text-align: center;
+  	text-align: left;
   }
 
   .site-header-menu .sidebar .widget:last-child {
@@ -408,7 +408,7 @@ a {
   	font-family: 'Roboto Slab', serif;
   	font-size: 18px;
   	margin-bottom: 12px;
-  	text-align: center;
+  	text-align: left;
   }
 
   .site-header-menu .sidebar ul {
@@ -423,16 +423,20 @@ a {
 
   .site-header-menu .sidebar a {
   	font-size: 16px;
-  	color: #000;
-  }
-
-  .site-header-menu .sidebar a:hover {
   	color: #ff8600;
   }
 
+  .site-header-menu .sidebar a:hover {
+  	color: #000;
+  }
+
   .site-header-menu .sidebar .search-form {
-  	margin: 0 auto;
+  	margin: 0;
   	max-width: 300px;
+  }
+
+  .site-header-menu .sidebar .widget-projects-list td {
+  	text-align: center;
   }
 
   .page-template-page-portada .servicios {
