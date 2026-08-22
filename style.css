@@ -386,6 +386,55 @@ a {
   	text-align: center;
   }
 
+  /* Sidebar inside header menu on mobile viewports */
+  .site-header-menu .sidebar {
+  	border-top: 1px dashed #ccc;
+  	float: none;
+  	margin-top: 20px;
+  	padding: 20px 0 0;
+  	width: 100%;
+  }
+
+  .site-header-menu .sidebar .widget {
+  	margin-bottom: 25px;
+  	text-align: center;
+  }
+
+  .site-header-menu .sidebar .widget:last-child {
+  	margin-bottom: 10px;
+  }
+
+  .site-header-menu .sidebar .widget-title {
+  	font-family: 'Roboto Slab', serif;
+  	font-size: 18px;
+  	margin-bottom: 12px;
+  	text-align: center;
+  }
+
+  .site-header-menu .sidebar ul {
+  	list-style: none;
+  	margin: 0;
+  	padding: 0;
+  }
+
+  .site-header-menu .sidebar li {
+  	margin: 8px 0;
+  }
+
+  .site-header-menu .sidebar a {
+  	font-size: 16px;
+  	color: #000;
+  }
+
+  .site-header-menu .sidebar a:hover {
+  	color: #ff8600;
+  }
+
+  .site-header-menu .sidebar .search-form {
+  	margin: 0 auto;
+  	max-width: 300px;
+  }
+
   .page-template-page-portada .servicios {
   	margin: 30px 0;
   }
