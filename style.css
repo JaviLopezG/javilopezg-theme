@@ -5,7 +5,7 @@
  Author:       Juan Hernándo, Javi López
  Author URI:   https://javilopezg.com
  Template:     twentysixteen
- Version:      1.0.8
+ Version:      1.0.9
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  javilopezg-theme
@@ -674,10 +674,10 @@ td {
 	.widget-projects-list td[data-has-touch-tooltip]::after {
 		content: '';
 		position: absolute;
-		top: 2px;
-		left: 2px;
-		right: 2px;
-		bottom: 2px;
+		top: 5px;
+		left: 5px;
+		right: 5px;
+		bottom: 5px;
 		border: 1px dotted #888888;
 		pointer-events: none;
 		box-sizing: border-box;
