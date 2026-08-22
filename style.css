@@ -1,0 +1,588 @@
+/*
+ Theme Name:   javilopezgth
+ Theme URI:    https://javilopezg.com/
+ Description:  Un tema hijo de Twenty Sixteen para javilopezg.coom
+ Author:       Juan Hernándo, Javi López
+ Author URI:   https://javilopezg.com
+ Template:     twentysixteen
+ Version:      1.0.2
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  javilopezgth
+*/
+
+.site-branding {
+	margin: 1.75em auto;
+	
+}
+
+.sd-social-official .sd-content ul > li {
+	float: none !important;
+}
+
+div.sharedaddy h3.sd-title {
+	display: none !important;
+}
+
+.site-header-main {
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.site-header-main {
+	position:relative;
+	z-index:10;
+}
+
+.site-header-main h1, .site-header-main p{
+	text-align: center;
+	color: darkgrey;
+}
+
+.site-branding h1.site-title a{
+	color: darkgrey;
+}
+
+.header-image {
+	position: absolute;
+	top: 0;
+	left:0;
+	background-color:white;
+}
+
+.site-header {
+	margin-bottom:3em;
+}
+
+@media screen and (min-width: 56.875em) {
+	.header-image{
+		margin: 0 4.5455%;
+	}
+}
+
+/******************* WEB 2018 **********************/
+
+body,
+button,
+input,
+select,
+textarea,
+.entry-footer,
+.entry-content .contact-form label {
+	color: #111;
+	font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.entry-title,
+.widget .widget-title,
+button, button[disabled]:hover, 
+button[disabled]:focus, 
+input[type="button"], 
+input[type="button"][disabled]:hover, 
+input[type="button"][disabled]:focus, 
+input[type="reset"], 
+input[type="reset"][disabled]:hover, 
+input[type="reset"][disabled]:focus, 
+input[type="submit"], 
+input[type="submit"][disabled]:hover, 
+input[type="submit"][disabled]:focus {
+	font-family: "Roboto Slab", serif;
+}
+
+body:not(.custom-background-image)::before, 
+body:not(.custom-background-image)::after {
+	height: 0;
+}
+
+a {
+	color: #ff8600;
+}
+
+.site {
+	margin: 0;
+}
+
+.site-header,
+.site-main {
+	display: flex;
+	flex-flow: row wrap;
+	max-width: 1024px;
+	margin: 40px auto 0;
+	padding: 20px 0 0;
+}
+
+.rubber-header {
+  align-self: flex-start;
+}
+
+.header-duck .site-header-main {
+	padding-left: 130px;
+	width: calc(100% - 240px);
+}
+
+.header-duck .site-header-menu {
+	margin-top: 0;
+}
+
+.header-duck .site-header-menu li {
+	transition: 0.4s;
+}
+
+.header-duck .site-header-menu li:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.header-duck .site-header-menu li:hover a {
+	color: #fff;
+}
+
+.header-duck .site-header-menu li.current-menu-item a {
+	background-color: #000;
+	color: #fff;
+}
+
+.header-duck .site-header-main h1, 
+.header-duck .site-header-main p {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 1.4em;
+  text-align: left;
+}
+
+.header-duck .site-header-main h1,
+.header-duck .site-header-main .site-title {
+	font-family: 'Roboto Slab', serif;
+  font-size: 48px;
+  margin: 0 0 20px;
+}
+
+.header-duck .site-branding {
+    margin: 0;
+    max-width: 660px;
+}
+
+.header-duck .menu-principal-container {
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+}
+
+.page-template-page-portada .servicios {
+	background-color: #f1f3f5;
+	margin: 80px 0;
+	width: 100%;
+}
+
+.page-template-page-portada .servicio {
+	align-content: center;
+	border-left: 1px dashed #ccc;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	width: 25%;
+}
+
+.page-template-page-portada .servicio:last-of-type {
+	border-right: 1px dashed #ccc;
+}
+
+.page-template-page-portada .servicio img {
+	padding: 30px 0 15px;
+}
+
+.page-template-page-portada .servicio h2 {
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.2em;
+	padding: 0 20px 30px 20px;
+}
+
+.page-template-page-portada .servicio a {
+  align-self: center;
+	color: #000;
+  text-align: center;
+}
+
+.page-template-page-portada .servicio a:hover {
+	color: #ff8600;
+}
+
+.page-template-page-portada .servicios .wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.site-footer {
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	padding: 0;
+}
+
+.site-footer .wrapper {
+	max-width: 1024px;
+	margin: 0 auto;
+	text-align: right;
+}
+
+.franja-blanca {
+	background-color: #fff;
+	width: 100%;
+}
+
+.franja-gris {
+	background-color: #f1f3f5;
+	margin-top: -30px;
+	padding: 10px 0 30px;
+	width: 100%;
+}
+
+.franja-gris a {
+	color: #000;
+}
+
+.franja-gris a:hover {
+	color: #ff8600;
+}
+
+.page-template-page-portada .news-info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+}
+
+.page-template-page-portada .news-info-img {
+    margin-right: 20px;
+    min-width: 48px;
+}
+
+.page-template-page-portada .news-info-text {
+    line-height: 1.4em;
+}
+
+.page-template-page-portada .news-info-text h2 {
+	color: #000;
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 30px;
+	line-height: 1.2em;
+	margin: 10px 0;
+}
+
+.page-template-page-portada .news-info-text p {
+	font-size: 20px;
+	line-height: 1.4em;
+}
+
+.page-template-page-portada .columnas-secciones h3 {
+	display: inline-block;
+	font-family: 'Roboto Slab', serif;
+}
+
+.page-template-page-portada .columnas-secciones img {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.page-template-page-portada .columnas-secciones {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin: 80px 0;
+	width: 100%;
+}
+
+.page-template-page-portada .columnas-secciones .columna-blog {
+	padding: 0 35px 50px 0;
+	width: 33.33%;
+}
+
+.page-template-page-portada .columna-blog a {
+	color: #000;
+}
+
+.page-template-page-portada .columna-blog a:hover {
+	color: #ff8600;
+}
+
+.page-template-page-portada .columna-blog ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.page-template-page-portada .columna-blog li {
+	margin: 16px 0;
+}
+
+.page-template-page-portada .columna-blog li a h3 {
+	color: #999;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+@media only screen and (max-width:910px) {
+	.site-header,
+	.site-main {
+		margin-top: 10px;
+	}
+
+	.header-duck {
+		justify-content: center;
+	}
+
+	.header-duck .site-header-main {
+		margin: 0 auto;
+    padding-left: 0;
+    width: 92vw;
+	}
+
+	.rubber-header {
+		margin: 0 auto;
+		width: 150px;
+	}
+
+	.header-duck .site-header-main h1 {
+    font-size: 36px;
+    line-height: 1.2em;
+    margin: 8px 0;
+    text-align: center;
+  }
+
+  .header-duck .site-header-main p {
+  	display: block;
+    font-size: 18px;
+    line-height: 1.2em;
+    margin: 16px 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+  	background-color: #fafafa;
+  	margin-bottom: 0;
+  	width: 100%;
+  }
+
+  .main-navigation li {
+    border-top: 0;
+  }
+
+  .main-navigation a {
+  	font-size: 16px;
+  	padding: 5px 0;
+  	text-align: center;
+  }
+
+  .page-template-page-portada .servicios {
+  	margin: 30px 0;
+  }
+
+  .page-template-page-portada .servicio {
+  	width: 100%;
+  }
+
+  .site-content {
+		margin: 0 auto;
+  	width: 92vw;
+  }
+
+  .page-template-page-portada .news-info-img {
+    display: none;
+	}
+
+  .page-template-page-portada .columnas-secciones {
+  	margin: 20px 0;
+  }
+
+  .page-template-page-portada .columnas-secciones .columna-blog {
+    padding: 0 0 50px 0;
+    width: 100%;
+	}
+
+	.site-footer .wrapper {
+		text-align: center;
+	}
+}
+
+.page-template-page-contenido .entry-title {
+  background-color: #fbfbfb;
+  font-family: 'Roboto Slab';
+  margin-top: 40px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.page-template-page-contenido article {
+	margin: 0 auto;
+	max-width: 92vw;
+	width: 100%;
+}
+
+.page-template-page-contenido .entry-header {
+	margin: 0;
+}
+
+.page-template-page-contenido .entry-content {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  max-width: 80ch;
+}
+
+.page-template-page-contenido .entry-content h2 {
+	font-family: 'Roboto Slab', serif;
+}
+
+.page-template-page-contenido.page-id-7118 .entry-content img {
+  width: 100%;
+}
+
+.page-id-7120 .entry-content {
+	max-width: 100%;
+}
+
+.page-id-7120 .servicios-listado {
+	display: flex;
+	align-content: flex-start;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.page-id-7120 .servicio-individual {
+	padding: 20px 5%;
+	width: 50%;
+}
+
+.site-content {
+  border-top: 1px dashed #ccc;
+  margin-top: 50px;
+}
+
+.widget:first-of-type {
+  border-top: 0;
+  margin-top: 30px;
+}
+
+body:not(.search-results) article:not(.type-page) img.below-entry-meta, 
+body:not(.search-results) article:not(.type-page) figure.below-entry-meta {
+	margin-left: 0;
+	max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+	.page-id-7120 .servicio-individual {
+		width: 100%;
+	}
+}
+
+.page-template-page-full .site-main {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.page-template-page-full .site-content {
+	margin: 0;
+	padding: 0;
+}
+
+.page-template-page-full article {
+	width: 100%;
+}
+
+.page-template-page-full .entry-header {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+	.page-template-page-full .entry-content {
+		margin: 0 auto;
+	}
+	
+	.page-template-page-full .site-content,
+	.page-template-page-full article {
+		width: 100%;
+	}
+}
+
+@media (min-width: 750px) {
+
+	.alignfull {
+		max-width: 1000%;
+		margin-right: calc(50% - 50vw);
+		margin-left: calc(50% - 50vw);
+		width: auto;
+	}
+
+	.alignwide {
+		max-width: 1400px;
+		margin-right: calc(50vw - 700px);
+		margin-left: calc(50vw - 700px);
+		width: auto;
+	}
+
+}
+
+.column-center {
+	justify-content: center;
+}
+
+figure.wp-block-gallery.has-nested-images,
+.site-main > article {
+	max-width: 100%;
+}
+/* Javi+ @2026 */
+:root {
+  --mi-naranja: #FF8600; 
+  --mi-naranja-suave: #FFEEAA;
+  --mi-gris: #F1F1F1;
+}
+
+#cn-accept-cookie {
+	background-color: var(--mi-naranja);
+	color: var(--mi-naranja-suave);
+}
+
+/* Widget de proyectos de la barra lateral */
+.widget-projects-list table, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+.widget-projects-list td {
+  background-color: var(--mi-gris);
+  text-align: center;
+}
+.widget-projects-list .legend {
+	font-size: x-small;
+}
+.widget-projects-list .legend ul li {
+	list-style-type: none;
+}
+.widget-projects-list .symbol {
+	font-style: bold;
+}
+.widget-projects-list .disclaimer {
+	font-size: small;
+}
+	
+/* Fragment directive */
+::target-text {
+  background-color: var(--mi-naranja-suave);
+  color: black;
+}
+::selection {
+  color: white;
+  background: var(--mi-naranja);
+}
