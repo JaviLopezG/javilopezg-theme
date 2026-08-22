@@ -5,7 +5,7 @@
  Author:       Juan Hernándo, Javi López
  Author URI:   https://javilopezg.com
  Template:     twentysixteen
- Version:      1.0.6
+ Version:      1.0.7
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  javilopezg-theme
@@ -661,4 +661,110 @@ td {
 ::selection {
 	color: white;
 	background: var(--mi-naranja);
+}
+
+/* Touch Tooltips */
+@media (hover: none) and (pointer: coarse), (pointer: coarse) {
+	[data-has-touch-tooltip]:not(a) {
+		text-decoration: underline dotted;
+		text-decoration-thickness: 1.5px;
+		text-underline-offset: 3px;
+		cursor: pointer;
+	}
+
+	a[data-has-touch-tooltip],
+	a:has([data-has-touch-tooltip]) {
+		color: var(--mi-naranja) !important;
+		text-decoration: underline dotted !important;
+		text-decoration-thickness: 1.5px !important;
+		text-underline-offset: 3px !important;
+		box-shadow: none !important;
+		border-bottom: none !important;
+		cursor: pointer;
+	}
+}
+
+.touch-tooltips-active [data-has-touch-tooltip]:not(a) {
+	text-decoration: underline dotted;
+	text-decoration-thickness: 1.5px;
+	text-underline-offset: 3px;
+	cursor: pointer;
+}
+
+.touch-tooltips-active a[data-has-touch-tooltip],
+.touch-tooltips-active a:has([data-has-touch-tooltip]) {
+	color: var(--mi-naranja) !important;
+	text-decoration: underline dotted !important;
+	text-decoration-thickness: 1.5px !important;
+	text-underline-offset: 3px !important;
+	box-shadow: none !important;
+	border-bottom: none !important;
+	cursor: pointer;
+}
+
+/* Tooltip popup bubble */
+.touch-tooltip-popup {
+	position: absolute;
+	z-index: 99999;
+	max-width: min(320px, calc(100vw - 24px));
+	background-color: #1a1a1a;
+	color: #ffffff;
+	padding: 10px 14px;
+	border-radius: 8px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 1.45;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+	word-wrap: break-word;
+	pointer-events: auto;
+	animation: touch-tooltip-fade-in 0.15s ease-out;
+}
+
+@keyframes touch-tooltip-fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(3px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.touch-tooltip-text {
+	display: block;
+	color: #ffffff;
+}
+
+.touch-tooltip-action {
+	margin-top: 8px;
+	padding-top: 8px;
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.touch-tooltip-link {
+	display: inline-block;
+	color: var(--mi-naranja) !important;
+	font-weight: 500;
+	text-decoration: underline !important;
+	font-size: 13.5px;
+	word-break: break-word;
+}
+
+.touch-tooltip-arrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+}
+
+.touch-tooltip-popup.placement-top .touch-tooltip-arrow {
+	bottom: -6px;
+	border-top: 6px solid #1a1a1a;
+}
+
+.touch-tooltip-popup.placement-bottom .touch-tooltip-arrow {
+	top: -6px;
+	border-bottom: 6px solid #1a1a1a;
 }
